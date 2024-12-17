@@ -14,8 +14,8 @@ use App\Http\Controllers\GoogleOAuthController;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
 
-Route::post('google/calendar/events/webhook', [GoogleOAuthController::class, 'handleWebhook'])->name('calendar.events.handle.webhook');
+Route::post('', 'App\Http\Controllers\Web\AuthController@webhookHandling');
